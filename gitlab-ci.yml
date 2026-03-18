@@ -1,0 +1,15 @@
+image: amazonlinux
+
+before_script:
+  - yum update -y
+  - yum install -y docker
+
+stages:
+  - setup
+
+setup-job:
+  stage: setup
+  script:
+    - echo "Running provisioning script..."
+    - chmod +x provisioner.sh
+    - ./provisioner.sh
