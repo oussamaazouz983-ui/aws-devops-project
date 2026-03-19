@@ -1,19 +1,25 @@
 #!/bin/bash
 
-# update system
+# Update package list
 sudo apt-get update -y
 
-# install git
+# Install Git
 sudo apt-get install git -y
 
-echo "Basic setup completed ✅"
-# install docker
-sudo apt-get update -y
+# Install Docker
 sudo apt-get install docker.io -y
 
-# here we start the docker 
+# Start Docker service
 sudo systemctl start docker
+
+# Enable Docker on boot
 sudo systemctl enable docker
 
-# here we test the docker 
+# Add ubuntu user to docker group (no sudo needed later)
+sudo usermod -aG docker ubuntu
+
+# Test Docker installation
 sudo docker run hello-world
+
+# Finish message
+echo "Setup completed"
