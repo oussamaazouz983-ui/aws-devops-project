@@ -1,12 +1,13 @@
-# AWS DevOps Starter Project 🚀
+# AWS DevOps AMI Project 🚀
 
-> 🚀 A beginner-friendly AWS DevOps project demonstrating automation, CI/CD, and AMI creation.
+> A hands-on DevOps project demonstrating automated AMI creation on AWS using Packer, Docker, and CI/CD.
 
 ---
 
 ## 📖 Description
 
-This project demonstrates core AWS DevOps practices by automating server provisioning and building custom AMIs using Packer and CI/CD pipelines.
+This project showcases core DevOps practices by automating the creation of a custom AWS AMI.
+The AMI is pre-configured with Docker and Git, allowing you to launch ready-to-use EC2 instances without manual setup.
 
 ---
 
@@ -14,7 +15,7 @@ This project demonstrates core AWS DevOps practices by automating server provisi
 
 1. Clone the repository
 2. Navigate to the project folder
-3. Make the script executable
+3. Make the provisioning script executable
 4. Run the provisioning script
 
 ```bash
@@ -26,11 +27,12 @@ chmod +x provisioner.sh
 
 ## ⚙️ Features
 
-- Update system packages
-- Install Git
-- Install Docker
-- Start Docker service
-- Run Docker test container
+- Updates system packages
+- Installs Git
+- Installs Docker
+- Starts and enables Docker service
+- Configures Docker to run without sudo
+- Runs a test container (hello-world)
 
 ---
 
@@ -38,17 +40,19 @@ chmod +x provisioner.sh
 
 1. CI/CD pipeline runs using GitLab CI
 2. Packer builds a custom AWS AMI
-3. Provisioning script installs required tools (Docker, Git)
-4. AMI can be used to launch pre-configured EC2 instances
+3. Provisioning script installs and configures Docker and Git
+4. The AMI is used to launch pre-configured EC2 instances
+5. Docker is ready to use without sudo on launch
 
 ---
 
 ## 🧠 Key Concepts Learned
 
-- Infrastructure automation
-- CI/CD pipelines
-- AMI creation with Packer
+- Infrastructure automation with Packer
+- CI/CD pipelines with GitLab
+- AMI creation and customization on AWS
 - Server provisioning using Bash
+- Docker installation and configuration
 
 ---
 
@@ -64,11 +68,11 @@ aws-devops-project/
 
 ---
 
-## 🧰 Technologies
+## 🧰 Technologies Used
 
 - Bash scripting
 - Docker
-- AWS (EC2)
+- AWS EC2
 - Packer
 - GitLab CI/CD
 
@@ -76,14 +80,15 @@ aws-devops-project/
 
 ## 🎯 Purpose
 
-This project is designed to:
+This project was built to:
 
-- Practice DevOps fundamentals
-- Understand server provisioning
-- Automate environment setup
+- Practice real-world DevOps workflows
+- Automate server provisioning
+- Build reusable cloud machine images
+- Gain hands-on experience with AWS infrastructure
 
 ---
 
 ## 👤 Author
 
-Azzouz Oussama
+Oussama Azzouz
