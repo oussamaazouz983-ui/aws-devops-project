@@ -8,8 +8,9 @@ packer {
 }
 
 source "amazon-ebs" "ubuntu" {
-  region        = "eu-west-2"
-  instance_type = "t2.micro"
+  region        = "eu-north-1"
+  instance_type = "t3.micro"
+
   source_ami_filter {
     filters = {
       name                = "ubuntu/images/*ubuntu-jammy-22.04-amd64-server-*"
